@@ -1,0 +1,448 @@
+/* ===========================================================
+   VARIÁVEIS (troque aqui e muda o site inteiro)
+   =========================================================== */
+:root {
+    --ciano: #00F7FF;
+    --ciano-suave: #20b2aa;
+    --azul-escuro: #003366;
+    --azul-medio: #2E82E3;
+    --azul-clarinho: #94c6ff;
+    --branco: #fff;
+    --branco-suave: #f5f5f5;
+    --preto: #000;
+    --cinza: #ccc;
+    --verde: #4CAF50;
+    --ambar: #FFA726;
+}
+
+/* ===========================================================
+   BASE
+   =========================================================== */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body.granulado {
+    background: url(../img/fundo.PNG),
+                url(../img/ruido3.png),
+                linear-gradient(50deg, #2E82E3, #4DB6AC);
+    background-repeat: repeat;
+    background-size: auto calc(50vh);
+}
+
+body.granulado,
+body.granulado html {
+    height: 100%;
+}
+
+body.granulado #home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ===========================================================
+   TIPOGRAFIA
+   =========================================================== */
+h1, h2, h3 {
+    letter-spacing: -0.04em;
+    font-weight: 700;
+}
+
+h1 { font-weight: 900; margin-bottom: 50px; }
+#home h1 { color: var(--branco); }
+#home h2 { font-size: 3em; }
+#home h3 { font-size: 2em; }
+
+/* Classes reutilizáveis */
+.text-ciano { color: var(--ciano) !important; font-weight: bold; }
+.text-branco { color: var(--branco) !important; }
+.text-branco-suave { color: var(--branco-suave) !important; }
+
+/* ===========================================================
+   NAVBAR
+   =========================================================== */
+#navbarHeader .navbar-brand img {
+    height: 43px;
+}
+
+#navbarHeader .nav-link {
+    padding: 0 30px;
+    color: var(--ciano);
+    transition: 0.3s;
+}
+#navbarHeader .nav-link:hover {
+    color: rgb(16, 209, 209);
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.7);
+}
+
+.navbar-transparente {
+    background: linear-gradient(
+        rgba(0, 51, 102, 0.7), 
+        rgba(0, 51, 102, 0.9)
+    );
+    padding: 15px 0;
+}
+
+.header-user a i {
+    font-size: 25px;
+}
+
+.divisor {
+    width: 1px;
+    background: var(--branco);
+    margin: 5px 25px;
+}
+
+/* ===========================================================
+   BOTÕES
+   =========================================================== */
+.btn-custom {
+    color: var(--branco);
+    border-radius: 500px;
+    text-transform: uppercase;
+    transition: .4s;
+    padding: 10px 20px;
+}
+
+.btn-ambar { background: var(--ambar); }
+.btn-ambar:hover { background: #427524bd; }
+
+.btn-verde { background: var(--verde); }
+.btn-verde:hover { background: #3d8b3f; color: var(--preto); }
+
+/* ===========================================================
+   IMAGEM DO TANQUE
+   =========================================================== */
+.img-tanque {
+    height: 60vh;
+    overflow: hidden;
+}
+.img-tanque img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===========================================================
+   CONTEÚDO
+   =========================================================== */
+#conteudo {
+    background: var(--branco);
+    padding: 20px 0;
+}
+
+.tab-paragrafo { text-indent: 2em; }
+
+.logo-container {
+    background-color: var(--azul-medio);
+    padding: 10px 25px;
+    display: inline-block;
+    border-radius: 20px;
+    margin: 30px 0 20px;
+}
+.logo-container img { height: 50px; }
+
+/* ===========================================================
+   ÁREAS / RECURSOS
+   =========================================================== */
+#areas {
+    background: url(../img/peixebicudo.svg),
+                linear-gradient(50deg, var(--preto), var(--ciano-suave));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 110vh;
+    padding-top: 230px;
+}
+
+#areas h1 { font-size: 2.7em; margin-bottom: 40px; }
+
+#areas p {
+    color: var(--ciano-suave);
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+#areas a { text-decoration: none; }
+
+#areas .card {
+    background: linear-gradient(
+        rgba(0, 51, 102, 0.2),
+        rgba(1, 42, 83, 0.5)
+    );
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+#areas .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(49, 48, 48, .2);
+}
+
+#areas .card h3 { color: var(--ciano); }
+#areas .card p { color: var(--branco); }
+
+/* ===========================================================
+   RODAPÉ
+   =========================================================== */
+#footer {
+    background: var(--preto);
+    padding: 50px 0 20px;
+    color: var(--cinza);
+}
+
+#footer a {
+    color: var(--branco);
+    transition: .3s;
+}
+#footer a:hover { color: #9bf0e1; }
+
+#footer .socials img {
+    height: 70px;
+    transition: .3s;
+}
+#footer .socials img:hover {
+    transform: scale(1.1);
+}
+
+/* ===========================================================
+   LOGIN / CADASTRO / REDEFINIÇÃO
+   =========================================================== */
+body.login,
+body.redefinir {
+    padding-top: 150px;
+    background: #643d87 url(../img/fundo-login.jpg) no-repeat top center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* ====== CONTAINER LOGIN / REDEFINIR ====== */
+.login-container,
+.redefinir-container {
+    max-width: 500px;
+    width: 100%;
+    background-color: rgba(255,255,255,.35);
+    border-radius: 12px;
+    margin: 120px auto 0;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+/* Centraliza o card dentro da página */
+body.login main,
+body.redefinir main {
+    display: flex;
+    justify-content: center;
+}
+
+/* ====== INPUTS COM ÍCONE 25x25 ====== */
+.login-container input,
+.redefinir-container input {
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+
+    padding-left: 52px;              /* espaço pro ícone */
+    border: none;
+
+    background-color: var(--branco);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 25px 25px;      /* 👈 ícone 25x25 */
+}
+
+/* Ícones do LOGIN */
+.login-container input.email {
+    background-image: url(../img/icone-email.svg);
+}
+
+.login-container input.senha {
+    background-image: url(../img/icone-cadeado.svg);
+}
+
+/* Ícone do REDEFINIR (cadeado) */
+.redefinir-container input {
+    background-image: url(../img/icone-cadeado.svg);
+}
+
+/* Botão */
+.login-container input.submit,
+.redefinir-container .submit {
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    font-weight: bold;
+    background: #007bff;
+    color: var(--branco);
+    cursor: pointer;
+    transition: .3s;
+    padding-left: 0;
+}
+
+.login-container input.submit:hover,
+.redefinir-container .submit:hover {
+    background: linear-gradient(to bottom, #2d629e, var(--azul-clarinho));
+    transform: translateY(-1px);
+}
+
+
+.login-container img,
+.redefinir-container img {
+    width: 120px;
+    height: 120px;
+    margin: -60px 0 30px;
+}
+
+.login input,
+.redefinir-container input {
+    width: 60%;
+    height: 40px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    border: none;
+    background-color: var(--branco);
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+.login input.email { background-image: url(../img/icone-email.svg); }
+.login input.senha,
+.redefinir-container input { background-image: url(../img/icone-cadeado.png); }
+
+.login input.submit,
+.redefinir-container .submit {
+    width: 60%;
+    height: 44px;
+    border-radius: 8px;
+    font-weight: bold;
+    background: #007bff;
+    color: var(--branco);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login input.submit:hover,
+.redefinir-container .submit:hover {
+    background: linear-gradient(to bottom, #2d629e, var(--azul-clarinho));
+    transform: translateY(-1px);
+}
+
+.redefinir-container input {
+    background-image: url(../img/icone-cadeado.svg);
+}
+
+/* ===========================================================
+   MEDIA QUERIES
+   =========================================================== */
+@media (max-width: 575px) {
+    h1 { font-size: 2em; }
+    .btn-custom { margin: 10px 15px; }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    h1 { font-size: 3em; }
+    .btn-custom { margin: 10px 15px; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    h1 { font-size: 4em; }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    h1 { font-size: 4.5em; }
+}
+
+@media (min-width: 1200px) {
+    h1 { font-size: 5.5em; }
+}
+
+
+/* ===========================================================
+   CADASTRO
+   =========================================================== */
+body.cadastro {
+    padding-top: 5px;
+    background: #643d87 url(../img/fundo-login.jpg) no-repeat top center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.cadastro-container {
+    width: 500px;
+    background-color: rgba(255,255,255,.35);
+    border-radius: 12px;
+    margin: 120px auto 0;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.cadastro-container img {
+    width: 120px;
+    height: 120px;
+    margin: -60px 0 30px;
+}
+
+.cadastro-container input {
+    width: 70%;
+    height: 46px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+
+    padding-left: 52px; /* espaço para ícone 25px */
+    border: none;
+
+    background-color: var(--branco);
+    background-repeat: no-repeat;
+    background-position: 14px center;
+
+    background-size: 25px 25px; /* ✅ TAMANHO DEFINITIVO */
+}
+
+.cadastro-container input.nome {
+    background-image: url(../img/icone-usuario.svg);
+}
+
+.cadastro-container input.email {
+    background-image: url(../img/icone-email.svg);
+}
+
+.cadastro-container input.senha {
+    background-image: url(../img/icone-cadeado.svg);
+}
+
+.cadastro-container input.cpf {
+    background-image: url(../img/icone-id.svg);
+}
+
+.cadastro-container input.submit {
+    padding-left: 0;
+    font-weight: bold;
+    background: var(--azul-medio);
+    color: var(--branco);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cadastro-container input.submit:hover {
+    background: linear-gradient(to bottom, #2d629e, var(--azul-clarinho));
+    transform: translateY(-1px);
+}

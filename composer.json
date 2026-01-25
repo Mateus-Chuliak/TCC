@@ -1,0 +1,54 @@
+{
+    "name": "zefish/sistema",
+    "description": "Pesqueiro ZéFish",
+    "type": "project",
+    "version": "1.0.0",
+    "keywords": ["pesqueiro", "reservas", "php", "mysql", "restaurante"],
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Mateus Chuliak",
+            "email": "mateus.chuliak@outlook.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Tiago Arruda",
+            "email": "tiago.arruda@outlook.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Eduardo Delmeglio",
+            "email": "eduardo.delmeglio@outlook.com",
+            "role": "Developer"
+        }
+    ],
+
+    "support": {
+        "email": "contato@zefish.com.br"
+    },
+
+    "require": {
+        "php": ">=8.0",
+        "phpmailer/phpmailer": "^6.8",
+        "respect/validation": "^2.2",
+        "dompdf/dompdf": "^2.0",
+        "nesbot/carbon": "^2.72",
+        "vlucas/phpdotenv": "^5.6"
+    },
+
+ 
+    "autoload": {
+        "psr-4": {
+            "Sistema\\": "Sistema/"
+        }
+    },
+
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    },
+
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
